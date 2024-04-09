@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search 2</title>
+        <title>Search</title>
     </head>
-    <body class="container">
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
+    <style>
+        #inputText[type="text"]{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            border-radius: 20px;
+            padding: 10px;
+            align-items: center;
+        }
+        .hyperLinks{
+            float: right;
+        }
+        #button{
+            display: flex;
+            margin-left: 630px;
+            margin-right: auto;
+            border-radius: 6px;
+            padding: 5px;
+            border: none;
+            background-color: #f1eded;
+        }
+    </style>
+    <body>
+        <div class="hyperLinks">
+            <a href="./images.html">Images</a> 
+            <a href="./Advance.html">Advance</a>
+        </div>
+        
+        <form action="https://google.com/search" class="mainForm">
+            <input type="text" name="q" id="inputText"><br>
+            <input type="submit" value="Google Search" id="button">
         </form>
+        
     </body>
 </html>
