@@ -9,32 +9,73 @@
     .hyperLink{
         float:right;
     }
-    #inputBox{
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 20px;
-        padding: 10px;
-        width: 300px;
-        align-items: center;
+    div.allTheseWord{
+        display: table-cell;
+        height: 30px;
+        vertical-align: auto;
     }
-    #button{
-        display: flex;
-        margin-left: 660px;
-        margin-right: auto;
-        border-radius: 6px;
-        padding: 5px;
-        border: none;
-        background-color:#f1eded;
+    div.exactWord{
+        display: table-cell;
+        height: 30px;
+        vertical-align: auto;
+    }
+    div.anyOfTheseWord{
+        display: table-cell;
+        height: 30px;
+        vertical-align: auto;
     }
 </style>
-<body>
+<body> 
     <div class="hyperLink">
         <a href="./index.html">Search</a>
     </div>
-    <form class="imageSearch" action="https://www.google.com/search">
-        <input type="text" name="q" id="inputBox"><br>
-        <input type="submit" value="Search Image" id="button">
+    <div class="mainHeader">
+        Advanced Search
+    </div>
+    <div>
+        <form action="" class="mainForm">
+            <div class="findPageHeading">
+                <span>Find pages with..</span>
+            </div>
+            <div class="mainDiv">
+                <div class="allTheseWord">
+                    <label>all these words: </label>
+                </div>
+                <div class="allTheseWord">
+                    <input type="text">
+                </div>
+                <div class="allTheseWord">
+                    <span>Type  the important words</span>
+                </div>
+            </div>
+            <div class="2ndDiv">
+                <div class="exactWord">
+                    <label>this exact word or phrase: </label>
+                </div>
+                <div class="exactWord">
+                    <input type="text">
+                </div>
+                <div class="exactWord">
+                    <span>Put exact word in quotes</span>
+                </div>
+
+            </div>
+            <div class="3rdDiv">
+                <div class="anyOfTheseWord">
+                    <label>Any of theses words: </label>
+                </div>
+                <div class="anyOfTheseWord">
+                    <input type="text">
+                </div>
+                <div class="anyOfTheseWord">
+                    <span>Type OR between all the words you want</span>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+    <form class="advanceSearch" action="https://www.google.com/search">
+        <input type="submit" value="Advanced Search" id="button">
 
     </form>
 </body>
