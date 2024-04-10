@@ -9,20 +9,85 @@
     .hyperLink{
         float:right;
     }
-    div.allTheseWord{
-        display: table-cell;
-        height: 30px;
-        vertical-align: auto;
+    .mainHeader{
+        color: red;
+        font-size: 20px;
+        margin: 25px 35px;
     }
-    div.exactWord{
-        display: table-cell;
+    .findPageHeading{
         height: 30px;
-        vertical-align: auto;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 19px;
     }
-    div.anyOfTheseWord{
+    .inputBox{
         display: table-cell;
         height: 30px;
-        vertical-align: auto;
+        vertical-align: auto; 
+    }
+    .desciption{
+        display: table-cell;
+        height: 30px;
+        vertical-align: auto;  
+    }
+    .headings{
+        display: table-cell;
+        height: 30px;
+        vertical-align: auto;  
+    }
+    div.mainDiv div.headings{
+        float: left;
+        display: inline;
+        min-width: 167px;
+        width: 13%;
+        font-size: 15px;
+        line-height: 16px;
+        vertical-align: middle;
+    }
+    div.mainDiv div.inputBox :focus{
+        width: 100px;
+        text-align: left;
+        font-size: 13px;
+        height: 25px;
+        padding-block: 1px;
+        padding-inline: 2px;
+        outline:0.5px solid blue;
+    }
+    div.mainDiv div.inputBox input[type=text]{
+        text-align: left;
+        min-width: 450px;
+        padding: 2px 8px;
+    }
+    div.mainDiv div.desciption{
+        font-size: 15px;
+        margin: 5 0 8px 1%;
+        min-width: 160px;
+        padding: 3px 15px;
+
+    }
+    div.mt{
+        display: table-cell;
+        min-width: 530px;
+        min-height: 41px;
+        vertical-align: middle;
+    }
+    div.heading2{
+        display: table-cell;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        color: rgb(164, 164, 164);
+        }
+    #button{
+        display: inline-block;
+        margin-left: 640px;
+        margin-top: 10px;
+        vertical-align: middle;
+        background-color: #4d90fe;
+        color: #FFF;
+        font-family: sans-serif;
+        padding: 6px;
+        border: 1px solid ;
+        border-radius: 4px;
     }
 </style>
 <body> 
@@ -30,53 +95,70 @@
         <a href="./index.html">Search</a>
     </div>
     <div class="mainHeader">
-        Advanced Search
+        <label> Advanced Search </label>
     </div>
+    <hr>
     <div>
         <form action="" class="mainForm">
             <div class="findPageHeading">
                 <span>Find pages with..</span>
             </div>
+            <div class="mt">&nbsp;</div>
+            <div class="heading2">
+                <span>To do this in the search box.</span>
+            </div>
+            
             <div class="mainDiv">
-                <div class="allTheseWord">
+                <div class="headings">
                     <label>all these words: </label>
                 </div>
-                <div class="allTheseWord">
+                <div class="inputBox">
                     <input type="text">
                 </div>
-                <div class="allTheseWord">
+                <div class="desciption">
                     <span>Type  the important words</span>
                 </div>
-            </div>
-            <div class="2ndDiv">
-                <div class="exactWord">
-                    <label>this exact word or phrase: </label>
+           
+                <div class="2ndDiv">
+                    <div class="headings">
+                        <label>this exact word or phrase: </label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text">
+                    </div>
+                    <div class="desciption">
+                        <span>Put exact word in quotes</span>
+                    </div>
                 </div>
-                <div class="exactWord">
-                    <input type="text">
-                </div>
-                <div class="exactWord">
-                    <span>Put exact word in quotes</span>
+                <div class="3rdDiv">
+                    <div class="headings">
+                        <label>Any of theses words: </label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text">
+                    </div>
+                    <div class="desciption">
+                        <span>Type OR between all the words you want</span>
+                    </div>
                 </div>
 
-            </div>
-            <div class="3rdDiv">
-                <div class="anyOfTheseWord">
-                    <label>Any of theses words: </label>
+                <div class="4thDiv">
+                    <div class="headings">
+                        <label>none of these words: </label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text">
+                    </div>
+                    <div class="desciption">
+                        <span>Put a minus sign just before that you don't want</span>
+                    </div>
                 </div>
-                <div class="anyOfTheseWord">
-                    <input type="text">
-                </div>
-                <div class="anyOfTheseWord">
-                    <span>Type OR between all the words you want</span>
-                </div>
-                
             </div>
         </form>
     </div>
+    <hr>
     <form class="advanceSearch" action="https://www.google.com/search">
         <input type="submit" value="Advanced Search" id="button">
-
     </form>
 </body>
 </html>

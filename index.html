@@ -8,7 +8,7 @@
             display: flex;
             margin-left: auto;
             margin-right: auto;
-            width: 300px;
+            width: 350px;
             border-radius: 20px;
             padding: 10px;
             align-items: center;
@@ -18,9 +18,19 @@
         }
         #button{
             display: flex;
-            margin-left: 630px;
+            margin-left: 560px;
             margin-right: auto;
             border-radius: 6px;
+            padding: 5px;
+            border: none;
+            background-color: #f1eded;
+        }
+        #luckyButton{
+            display: flex;
+            margin-left: 680px;
+            margin-right: auto;
+            margin-top: -25px;
+            border-radius: 5px;
             padding: 5px;
             border: none;
             background-color: #f1eded;
@@ -36,6 +46,10 @@
             <input type="text" name="q" id="inputText"><br>
             <input type="submit" value="Google Search" id="button">
         </form>
+        <form action="https://doodles.google/">
+            <input type="submit" value="I'm Feeling Lucky!" id="luckyButton">
+        </form>
+
         
     </body>
 </html>
