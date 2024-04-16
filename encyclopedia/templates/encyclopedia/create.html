@@ -1,0 +1,29 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+
+{% block body %}
+    <div>
+        <form id='newEntryForm'>
+            <label id='entryLabel'>Enter Title</label>
+            <input type='text' id='titleLabel' required></br>
+            <label for="newEntry">Add Content:</label>
+            <textarea id="newEntry" name="newEntry" required></textarea><br>
+            <input type="submit" value='Save'>
+        </form>
+    </div>
+    
+<script>
+    document.getElementById('newEntryForm').addEventListener('submit',
+    function(dataCollector){
+        dataCollector.preventDefault();
+        const title = document.getElementById('titleLabel').value;
+        const content = document.getElementById('newEntry').value;
+        console.log('title',title);
+        console.log(content);
+
+    });
+</script>
+{% endblock %}
